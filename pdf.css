@@ -1,98 +1,126 @@
+```css
 /*
- * Davenport University — Academic Forms PDF Template
- * Purpose: Consistent, readable styling for generated form PDFs.
+ * Davenport University — Student Alert PDF Stylesheet
+ * Purpose:
+ * Improve readability, page spacing, and consistency
+ * across generated Dynamic Forms PDFs.
  */
 
-/* 1. Page setup */
+/* =========================================
+   1. PAGE SETUP
+   ========================================= */
+
 @page {
     size: letter;
-    margin: 0.65in;
+    margin: 0.35in 0.45in 0.45in 0.45in;
 }
 
-/* 2. Typography and general layout */
+/* =========================================
+   2. GLOBAL TYPOGRAPHY AND SPACING
+   ========================================= */
+
 html,
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 11pt;
-    line-height: 1.4;
+    font-size: 10.5pt;
+    line-height: 1.35;
     color: #222222;
     background: #ffffff;
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-/* Use predictable sizing */
 * {
     box-sizing: border-box;
 }
 
-/* 3. Main content containers */
+/* =========================================
+   3. MAIN CONTENT WIDTH AND POSITION
+   ========================================= */
+
 #maincontent,
 #FormPage,
 form,
 main,
 .pdf-content {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    padding-top: 0 !important;
+    padding-right: 0 !important;
 }
 
-/* 4. Headings */
+/* =========================================
+   4. HEADINGS
+   ========================================= */
+
 h1,
 h2,
 h3,
 h4 {
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.25;
+    line-height: 1.2;
     page-break-after: avoid;
     break-after: avoid;
     color: #222222;
 }
 
 h1 {
-    color: #e12f22;
-    font-size: 24pt;
-    font-weight: 700;
-    margin: 0 0 16pt;
-    padding: 0 0 8pt;
+    color: #c83228;
+    font-size: 22pt !important;
+    font-weight: bold;
     text-align: center;
-    border-bottom: 2pt solid #e12f22;
+    margin: 0 0 10pt !important;
+    padding: 0 0 7pt;
+    border-bottom: 2pt solid #c83228;
 }
 
 h2 {
-    color: #e12f22;
-    font-size: 15pt;
-    font-weight: 700;
-    margin: 18pt 0 8pt;
+    color: #c83228;
+    font-size: 15pt !important;
+    font-weight: bold;
+    margin: 12pt 0 6pt;
 }
 
 h3,
 h4 {
-    font-size: 11.5pt;
-    font-weight: 700;
-    margin: 12pt 0 6pt;
+    font-size: 11pt !important;
+    font-weight: bold;
+    margin: 9pt 0 5pt;
 }
 
-/* 5. Paragraphs and emphasized text */
+/* =========================================
+   5. PARAGRAPHS AND GENERAL TEXT
+   ========================================= */
+
 p {
-    margin: 0 0 8pt;
-    line-height: 1.45;
+    margin: 0 0 6pt;
+    line-height: 1.35;
+    orphans: 2;
+    widows: 2;
 }
 
 strong,
-b {
-    font-weight: 700;
+b,
+th,
+label {
+    font-weight: bold;
 }
 
-/* 6. Tables */
+/* =========================================
+   6. TABLES AND FORM LAYOUT
+   ========================================= */
+
 table {
     width: 100% !important;
     max-width: 100% !important;
-    font-size: 10.5pt !important;
     border-collapse: collapse;
     border-spacing: 0;
-    margin: 0 0 12pt;
+    font-size: 10pt !important;
+    margin: 0 0 8pt;
     page-break-inside: auto;
 }
 
@@ -107,11 +135,10 @@ tr {
 
 th,
 td {
-    padding: 7pt 6pt;
-    font-size: 10.5pt;
-    line-height: 1.35;
+    padding: 5pt 6pt !important;
     text-align: left;
-    vertical-align: top;
+    vertical-align: middle;
+    line-height: 1.25;
     border-bottom: 0.5pt solid #d3d3d3;
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -120,30 +147,35 @@ td {
 th {
     background: #f2f2f2;
     color: #222222;
-    font-weight: 700;
+    font-weight: bold;
 }
 
-/* 7. Form labels and questions */
+/* =========================================
+   7. FORM LABELS
+   ========================================= */
+
 label,
 .field-label,
 .question,
 .form-label {
     color: #222222;
-    font-size: 11pt;
-    font-weight: 700;
-    line-height: 1.4;
+    font-size: 10pt !important;
+    font-weight: bold;
 }
 
-/* 8. Form values and controls */
+/* =========================================
+   8. INPUTS AND FIELD VALUES
+   ========================================= */
+
 input,
 select,
 textarea,
 .resizabletextarea,
 .field-value,
 .form-value {
-    max-width: 100%;
+    max-width: 100% !important;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 11pt;
+    font-size: 10pt !important;
     color: #222222;
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -155,7 +187,7 @@ textarea,
 .resizabletextarea {
     border: 0.75pt solid #c8c8c8;
     background: #ffffff;
-    padding: 5pt 6pt;
+    padding: 4pt 5pt;
 }
 
 textarea,
@@ -163,94 +195,12 @@ textarea,
     white-space: pre-wrap;
 }
 
-/* 9. Links */
+/* =========================================
+   9. LINKS
+   ========================================= */
+
 a {
-    color: #b5261c;
+    color: #a9251c;
     text-decoration: underline;
     overflow-wrap: break-word;
-}
-
-/* 10. Lists */
-ul,
-ol {
-    margin: 0 0 10pt 18pt;
-    padding: 0;
-}
-
-li {
-    margin: 0 0 3pt;
-}
-
-/* 11. Images and signatures */
-img,
-svg {
-    max-width: 100%;
-    height: auto;
-}
-
-.signature,
-.signature img,
-img.signature {
-    max-width: 100%;
-    height: auto;
-}
-
-/* 12. Content blocks and page breaks */
-.section,
-.form-section,
-.field-group,
-.signature-block {
-    page-break-inside: auto;
-    break-inside: auto;
-}
-
-/* 13. Footer, if present in the form */
-.pdf-footer,
-footer {
-    color: #666666;
-    font-size: 8.5pt;
-    border-top: 0.5pt solid #d3d3d3;
-    margin-top: 18pt;
-    padding-top: 6pt;
-}
-
-/* 14. Print and PDF styling */
-@media print {
-    html,
-    body {
-        font-size: 11pt;
-        color: #222222;
-        background: #ffffff;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
-
-    a {
-        color: #222222;
-        text-decoration: underline;
-    }
-
-    input,
-    select,
-    textarea,
-    .resizabletextarea {
-        max-width: 100% !important;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4 {
-        page-break-after: avoid;
-        break-after: avoid;
-    }
-
-    table,
-    img,
-    .section,
-    .form-section,
-    .field-group,
-    .signature-block {
-        max-width: 100%;
-    }
-}
+    word-wrap: break
