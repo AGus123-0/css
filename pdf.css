@@ -10,8 +10,8 @@
 html,
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 10.5pt;
-    line-height: 1.45;
+    font-size: 11pt;
+    line-height: 1.4;
     color: #222222;
     background: #ffffff;
     margin: 0;
@@ -30,7 +30,8 @@ main,
 .pdf-content {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
 }
 
 /* Headings */
@@ -47,9 +48,9 @@ h4 {
 
 h1 {
     color: #e12f22;
-    font-size: 22pt;
+    font-size: 24pt;
     font-weight: 700;
-    margin: 0 0 18pt;
+    margin: 0 0 16pt;
     padding: 0 0 8pt;
     border-bottom: 2pt solid #e12f22;
 }
@@ -188,8 +189,8 @@ img.signature {
 .form-section,
 .field-group,
 .signature-block {
-    page-break-inside: avoid;
-    break-inside: avoid;
+    page-break-inside: auto;
+    break-inside: auto;
 }
 
 /* Footer helpers, if the PDF template includes them */
