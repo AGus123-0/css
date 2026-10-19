@@ -234,3 +234,59 @@ svg {
 img.signature {
     max-width: 100% !important;
     height
+
+    height: auto;
+}
+
+/* =========================================
+   12. PREVENT UNNECESSARY BLANK PAGES
+   ========================================= */
+
+html,
+body {
+    height: auto !important;
+    min-height: 0 !important;
+    page-break-after: auto !important;
+    break-after: auto !important;
+}
+
+@media print {
+    html,
+    body,
+    form,
+    main,
+    #maincontent,
+    #FormPage,
+    .pdf-content {
+        height: auto !important;
+        min-height: 0 !important;
+        page-break-after: auto !important;
+        break-after: auto !important;
+        margin-bottom: 0 !important;
+    }
+
+    body > :last-child,
+    form > :last-child,
+    #maincontent > :last-child,
+    #FormPage > :last-child {
+        page-break-after: auto !important;
+        break-after: auto !important;
+    }
+
+    /* Keep headings with the content that follows them. */
+    h1,
+    h2,
+    h3,
+    h4 {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    /* Avoid splitting signature and acknowledgment blocks. */
+    .student-acknowledgment,
+    .acknowledgment,
+    .signature-block {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+}
