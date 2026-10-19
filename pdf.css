@@ -1,16 +1,7 @@
-/* Temporary test for Davenport Dynamic Forms */
-
 body {
-    background-color: #eeeeee !important;
-    font-family: Arial, sans-serif !important;
+    font-size: 10px !important;
 }
 
 h1 {
-    color: red !important;
-    font-size: 6px !important;
-    text-align: left !important;
-}
-
-table {
-    border: 2px solid red !important;
+    font-size: 18px !important;
 }
